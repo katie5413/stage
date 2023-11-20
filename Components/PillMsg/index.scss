@@ -1,0 +1,22 @@
+.pill {
+    display: flex;
+    align-items: center;
+    width: min-content;
+    margin: auto;
+    position: absolute;
+    background-color: oldlace;
+    padding: 8px 4px;
+    border-radius: 999px;
+    font-size: 14px;
+    top: 0;
+    left: 0;
+    line-height: 1.2;
+    border: 2px solid rgb(198, 195, 195);
+    box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.08);
+    cursor: pointer;
+
+    &:hover {
+        border: 2px solid rgb(180, 178, 178);
+        box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.8);
+    }
+}

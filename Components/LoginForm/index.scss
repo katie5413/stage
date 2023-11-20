@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css?family=Exo+2:200i');
+
+:root {
+    /* Set neon color */
+    --neon-text-color: #f40;
+    --neon-border-color: #08f;
+    --neon-pink: #f0f;
+}
+
+.passCodeInput {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 700px;
+    min-width: 800px;
+
+    @media screen and (max-width: 768px) {
+        min-width: unset;
+    }
+
+    & > .container {
+        position: relative;
+        padding: 2rem 100px 2rem 2rem;
+
+        .board {
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            position: absolute;
+            width: 100%;
+            z-index: -1;
+        }
+
+        @media screen and (max-width: 768px) {
+            padding: 2rem 3rem 1rem 1rem;
+        }
+
+        // @media screen and (max-width: 768px) {
+        //     padding: 2rem 1rem;
+        // }
+
+        & > .passcodeArea {
+            text-align: center;
+            margin: 24px 40px;
+
+            @media screen and (max-width: 768px) {
+                margin: 12px 20px;
+            }
+
+            & > input {
+                border: 2px solid white;
+                border-radius: 4px;
+                padding: 0;
+                margin: 6px;
+                width: 65px;
+                height: 65px;
+                text-align: center;
+                font-size: 32px;
+                line-height: 1.29;
+                text-transform: uppercase;
+                background-clip: padding-box;
+                font-weight: bold;
+                color: #1900fa;
+
+                &:focus {
+                    -webkit-appearance: none;
+                    border: 2px solid skyblue;
+                }
+
+                // @media screen and (max-width: 900px) {
+                //     width: 2.5rem;
+                //     height: 2.5rem;
+                //     margin: 3px;
+                //     font-size: 1.5rem;
+                //     line-height: 1.5rem;
+                // }
+
+                @media screen and (max-width: 768px) {
+                    width: 2rem;
+                    height: 2rem;
+                    margin: 3px;
+                    font-size: 1rem;
+                    line-height: 1rem;
+                }
+            }
+
+            & > .password {
+                width: -webkit-fill-available;
+
+                & > input[type='password'] {
+                    font-size: 14px;
+                    width: -webkit-fill-available;
+                    margin: 12px 6px 6px;
+                    padding: 6px;
+                    border-radius: 4px;
+                    border: none;
+                }
+            }
+        }
+    }
+
+    & > .btnArea {
+        position: absolute;
+        right: 85px;
+        top: 280px;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        justify-content: center;
+        margin: 16px 0;
+
+        .entryBtn {
+            position: relative;
+            width: 70px;
+            height: 50px;
+            transform: skewY(-16deg);
+            background-color: rgb(184, 66, 66);
+            color: white;
+            font-size: 20px;
+            border: 3px solid #ccc;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: not-allowed;
+
+            &:hover {
+                background-color: rgb(135, 48, 48);
+            }
+        }
+
+        a.entryBtn {
+            cursor: pointer;
+            background-color: rgb(66, 72, 184);
+            &:hover {
+                background-color: rgb(63, 48, 135);
+            }
+        }
+
+        & > .loginBtn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
+    & > .bottomBtnArea {
+        position: absolute;
+        bottom: 140px;
+        transform: translateX(-10px);
+        background-color: rgb(184, 66, 66);
+        border: 3px solid #ccc;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .entryBtn {
+            color: white;
+            font-size: 20px;
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            width: 100px;
+            height: 40px;
+        }
+
+        @media screen and (max-width: 768px) {
+            bottom: 260px;
+
+            .entryBtn {
+                font-size: 16px;
+                height: 32px;
+                width: 80px;
+            }
+        }
+
+        &:hover {
+            background-color: rgb(135, 48, 48);
+        }
+    }
+
+    &.student {
+        .container {
+            .board {
+                width: 120%;
+
+                @media screen and (max-width: 768px) {
+                    width: 130%;
+                }
+            }
+
+            .passcodeArea {
+                @media screen and (max-width: 768px) {
+                    margin: 0;
+                }
+            }
+        }
+        .bottomBtnArea {
+            margin-left: 30px;
+            @media screen and (max-width: 768px) {
+                margin-bottom: 12px;
+            }
+        }
+    }
+}

@@ -1,0 +1,39 @@
+.historyItem {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 12px;
+
+    .content_box {
+        display: flex;
+        flex-direction: column;
+
+        .name {
+            color: var(--function);
+        }
+
+        .text {
+            word-break: break-all;
+
+            img {
+                width: 100%;
+            }
+        }
+    }
+}
+
+#toggleBtn {
+    position: absolute;
+    top: 14px;
+    right: calc(30vw + 16px);
+
+    & .icon {
+        display: none;
+        width: 32px;
+        height: 32px;
+
+        &.active {
+            display: block;
+            cursor: pointer;
+        }
+    }
+}

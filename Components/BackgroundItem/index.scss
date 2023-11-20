@@ -1,0 +1,38 @@
+.backgroundItem {
+    display: flex;
+    font-size: 14px;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    cursor: pointer;
+
+    & .img {
+        width: 20rem;
+        margin-bottom: 4px;
+        border-radius: 8px;
+
+        @media screen and (max-width: 600px) {
+            width: 5rem;
+        }
+    }
+
+    & .name {
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 1;
+        overflow: hidden;
+        color: gray;
+
+        @media screen and (max-width: 600px) {
+            font-size: 12px;
+        }
+    }
+
+    &:hover {
+        & .name {
+            color: var(--black);
+        }
+    }
+}

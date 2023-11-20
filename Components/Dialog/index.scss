@@ -1,0 +1,93 @@
+#dialog {
+    display: none;
+    position: absolute;
+    top: 100px;
+    left: calc(50% - 15vw);
+    transform: translateX(-50%);
+    width: 100%;
+    min-width: 300px;
+    max-width: 60vw;
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 8px;
+    z-index: 3;
+    height: fit-content;
+    padding: 16px;
+    gap: 16px;
+    font-size: 20px;
+    flex-direction: column;
+
+    &.active {
+        display: flex;
+    }
+
+    &>.top {
+        display: flex;
+        gap: 16px;
+        width: 100%;
+
+        &>.name,
+        &>.text {
+            font-size: 20px;
+        }
+
+        &>.name {
+            flex-shrink: 0;
+        }
+
+        &>.text {
+            word-break: break-all;
+
+            &>.link {
+                color: var(--function);
+            }
+
+            &>.image {
+                width: 100%;
+                cursor: pointer;
+
+                &>img {
+                    width: 100%;
+                    max-width: 150px;
+                    max-height: 150px;
+                }
+            }
+        }
+    }
+
+    &>.bottom {
+        display: flex;
+        justify-content: flex-end;
+
+        &>.control {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+
+            &>.page {
+                display: flex;
+                gap: 8px;
+            }
+
+            &>.arrow {
+                cursor: pointer;
+                padding: 4px 8px;
+
+                &.hide {
+                    visibility: hidden;
+                    pointer-events: none;
+                }
+            }
+        }
+    }
+
+    &>.right {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        width: 100%;
+
+        &>.content {
+            font-size: 20px;
+        }
+    }
+}

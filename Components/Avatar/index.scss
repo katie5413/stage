@@ -1,0 +1,48 @@
+.person {
+    display: flex;
+    font-size: 14px;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    cursor: pointer;
+
+    & .img,
+    & .tmpImg {
+        width: 10rem;
+        max-height: 20rem;
+        margin-bottom: 4px;
+        border-radius: 8px;
+
+        @media screen and (max-width: 600px) {
+            width: 3rem;
+            height: 3rem;
+        }
+    }
+
+    & .tmpImg {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #eceef3;
+    }
+
+    & .name {
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 1;
+        overflow: hidden;
+        color: gray;
+
+        @media screen and (max-width: 600px) {
+            font-size: 12px;
+        }
+    }
+
+    &:hover {
+        & .name {
+            color: var(--black);
+        }
+    }
+}
