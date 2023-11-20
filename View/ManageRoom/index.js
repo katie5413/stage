@@ -325,11 +325,12 @@ $(document).ready(function () {
         document.body.appendChild(dummy);
         const shareLink = text
             .concat(`?roomCode=${roomID}`)
-            .replace("ManageRoom", "Main");
+            .replace("View/ManageRoom/", "");
         dummy.value = shareLink;
         dummy.select();
         document.execCommand("copy");
         document.body.removeChild(dummy);
+        console.log(shareLink)
         alert("複製成功！");
     });
 
