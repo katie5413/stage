@@ -1,7 +1,7 @@
-# lineSimulator
-## GBL lab project 「 超時空會客室 」
+# stage
+## GBL lab project 「 舞台 」
 
-模擬跨時空的清明上河圖
+舞台角色對話
 
 ## 功能簡介
 
